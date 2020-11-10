@@ -16,7 +16,7 @@ jobs:
           npm install
           npm run build
 
-      - name: Push to gh-pages branch
+      - name: Setup gh-pages branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -25,6 +25,12 @@ jobs:
           git config user.name "Larandar's Bot"
           git config user.email "larandar-bot@users.noreply.github.com"
           git remote add origin "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+
+      - name: Use CNAME
+        run: echo "larandar.io" > CNAME
+
+      - name: Push to gh-pages branch
+        run: |
           git add .
           git commit -am "🚀 Builded GH Pages"
           git push --force origin gh-pages
