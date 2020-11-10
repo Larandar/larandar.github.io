@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        ".svelte": true,
+        "build": true
+    }
+}
