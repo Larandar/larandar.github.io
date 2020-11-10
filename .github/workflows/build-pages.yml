@@ -22,6 +22,8 @@ jobs:
         run: |
           cd build
           git init -b gh-pages
+          git config user.name "Larandar's Bot"
+          git config user.email "larandar-bot@users.noreply.github.com"
           git remote add origin "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git add .
           git commit -am "🚀 Builded GH Pages"
