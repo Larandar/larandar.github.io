@@ -30,9 +30,9 @@ jobs:
         working-directory: build
         run: echo "larandar.io" > CNAME
 
-      - name: Proof of undocumented behavior
+      - name: Disable Jekyll
         working-directory: build
-        run: cp -rv _app app
+        run: touch .nojekyll
 
       - name: Push gh-pages branch
         working-directory: build
