@@ -30,6 +30,10 @@ jobs:
         working-directory: build
         run: echo "larandar.io" > CNAME
 
+      - name: Proof of undocumented behavior
+        working-directory: build
+        run: cp -rv _app app
+
       - name: Push gh-pages branch
         working-directory: build
         run: |
