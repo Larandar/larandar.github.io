@@ -1,0 +1,29 @@
+:root {
+    display: grid;
+    place-items: center;
+    font-family: "Poppins", Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+}
+
+main {
+    text-align: center;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+h1 {
+    color: hsl(165, 57%, 38%);
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.1;
+    margin: 4rem auto;
+}
+
+p {
+    max-width: 14rem;
+    margin: 2rem auto;
+    line-height: 1.35;
+}
